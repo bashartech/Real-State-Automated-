@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+openai-agents
+httpx
+tensorflow-cpu==2.15.0

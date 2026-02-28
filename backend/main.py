@@ -11,10 +11,15 @@ load_dotenv()
 app = FastAPI(title="Real Estate Chatbot API")
 
 # Configure CORS
-frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3001")
+frontend_url = os.getenv("FRONTEND_URL", "https://real-state-automated.vercel.app")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[frontend_url, "http://localhost:3001", "http://localhost:3000"],
+    allow_origins=[
+        frontend_url,
+        "https://real-state-automated.vercel.app",
+        "http://localhost:3001",
+        "http://localhost:3000"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

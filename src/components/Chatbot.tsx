@@ -15,7 +15,7 @@ interface Message {
   timestamp: Date;
 }
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8001';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://bashartc14-real-state.hf.space';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
