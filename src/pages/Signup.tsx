@@ -109,11 +109,11 @@ export default function Signup() {
                 referrerPolicy="no-referrer"
               />
             </Link>
-            <h2 className="text-3xl font-display font-extrabold text-luxury-black">{t('signup.title')}</h2>
+            <h2 className="text-3xl font-display font-extrabold text-luxury-black">{('signup.title')}</h2>
             <p className="mt-2 text-sm text-gray-500">
-              {t('signup.subtitle')}{' '}
+              {('signup.subtitle')}{' '}
               <Link to="/login" className="font-bold text-red-600 hover:text-luxury-black transition-colors">
-                {t('signup.signInLink')}
+                {('signup.signInLink')}
               </Link>
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function Signup() {
                 className="mb-6 p-4 bg-green-50 border border-green-200 rounded-2xl flex items-center gap-3"
               >
                 <CheckCircle className="text-green-600" size={24} />
-                <p className="text-green-800 font-medium">{t('signup.success')}</p>
+                <p className="text-green-800 font-medium">{('signup.success')}</p>
               </motion.div>
             )}
 
@@ -146,7 +146,7 @@ export default function Signup() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-                  {t('signup.fullName')}
+                  {('signup.fullName')}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -166,7 +166,7 @@ export default function Signup() {
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-                  {t('signup.email')}
+                  {('signup.email')}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -186,7 +186,7 @@ export default function Signup() {
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-                  {t('signup.password')}
+                  {('signup.password')}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -203,12 +203,12 @@ export default function Signup() {
                     placeholder="••••••••"
                   />
                 </div>
-                <p className="text-xs text-gray-400 mt-1">{t('signup.passwordHint')}</p>
+                <p className="text-xs text-gray-400 mt-1">{('signup.passwordHint')}</p>
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
-                  {t('signup.confirmPassword')}
+                  {('signup.confirmPassword')}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -239,13 +239,13 @@ export default function Signup() {
                 </div>
                 <div className="ml-3 text-sm">
                   <label htmlFor="terms" className="text-gray-500">
-                    {t('signup.terms')}{' '}
+                    {('signup.terms')}{' '}
                     <a href="#" className="font-bold text-red-600 hover:text-luxury-black transition-colors">
-                      {t('signup.termsLink')}
+                      {('signup.termsLink')}
                     </a>{' '}
-                    {t('signup.and')}{' '}
+                    {('signup.and')}{' '}
                     <a href="#" className="font-bold text-red-600 hover:text-luxury-black transition-colors">
-                      {t('signup.privacyLink')}
+                      {('signup.privacyLink')}
                     </a>
                   </label>
                 </div>
@@ -256,7 +256,7 @@ export default function Signup() {
                 disabled={isSubmitting}
                 className="w-full flex justify-center py-4 px-4 border border-transparent rounded-2xl shadow-sm text-sm font-bold uppercase tracking-widest text-white bg-red-600 hover:bg-luxury-black transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? t('signup.creating') : t('signup.createAccount')}
+                {isSubmitting ? ('signup.creating') : ('signup.createAccount')}
               </button>
             </form>
 
@@ -266,7 +266,7 @@ export default function Signup() {
                   <div className="w-full border-t border-gray-200" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500 uppercase tracking-widest text-[10px] font-bold">{t('signup.orContinue')}</span>
+                  <span className="px-2 bg-white text-gray-500 uppercase tracking-widest text-[10px] font-bold">{('signup.orContinue')}</span>
                 </div>
               </div>
 
@@ -278,7 +278,7 @@ export default function Signup() {
                   className="w-full inline-flex justify-center py-3 px-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-all disabled:opacity-50"
                 >
                   <Chrome className="h-5 w-5 mr-2" />
-                  {t('signup.google')}
+                  {('signup.google')}
                 </button>
                 <button
                   type="button"
@@ -287,7 +287,7 @@ export default function Signup() {
                   className="w-full inline-flex justify-center py-3 px-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-all disabled:opacity-50"
                 >
                   <Github className="h-5 w-5 mr-2" />
-                  {t('signup.github')}
+                  {('signup.github')}
                 </button>
               </div>
             </div>
@@ -307,11 +307,11 @@ export default function Signup() {
         <div className="absolute inset-0 flex items-center justify-center p-20">
           <div className="max-w-xl">
             <h2 className="text-5xl font-display font-extrabold text-white mb-6 leading-tight">
-              {t('signup.heroTitle')} <br />
-              <span className="text-red-600">{t('signup.heroTitleAccent')}</span>
+              {('signup.heroTitle')} <br />
+              <span className="text-red-600">{('signup.heroTitleAccent')}</span>
             </h2>
             <p className="text-xl text-white/80 leading-relaxed">
-              {t('signup.heroSubtitle')}
+              {('signup.heroSubtitle')}
             </p>
           </div>
         </div>
