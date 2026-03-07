@@ -116,9 +116,9 @@ export default function Chatbot() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 z-50 bg-red-600 text-white p-4 rounded-full shadow-2xl hover:bg-luxury-black transition-all hover:scale-110"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-red-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:bg-luxury-black transition-all hover:scale-110"
           >
-            <MessageCircle size={28} />
+            <MessageCircle size={24} className="sm:w-7 sm:h-7" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -131,12 +131,12 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed bottom-6 right-6 z-50 w-[400px] h-[600px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-gray-100"
+            className="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 z-50 w-full sm:w-[400px] h-[100dvh] sm:h-[600px] bg-white sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden border-t sm:border border-gray-100"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-red-600 to-luxury-black text-white p-6 flex justify-between items-center">
+            <div className="bg-gradient-to-r from-red-600 to-luxury-black text-white p-4 sm:p-6 flex justify-between items-center">
               <div>
-                <h3 className="font-display font-bold text-lg">Real Estate Assistant</h3>
+                <h3 className="font-display font-bold text-base sm:text-lg">Real Estate Assistant</h3>
                 <p className="text-xs text-white/80">Scott J. Realtor Group</p>
               </div>
               <button
@@ -148,7 +148,7 @@ export default function Chatbot() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4 bg-gray-50">
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-gray-50">
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
@@ -161,13 +161,13 @@ export default function Chatbot() {
                 >
                   <div
                     className={cn(
-                      'max-w-[80%] rounded-2xl px-4 py-3 text-sm',
+                      'max-w-[85%] sm:max-w-[80%] rounded-2xl px-3 sm:px-4 py-2 sm:py-3 text-sm',
                       message.sender === 'user'
                         ? 'bg-red-600 text-white rounded-br-none'
                         : 'bg-white text-luxury-black rounded-bl-none shadow-sm border border-gray-100'
                     )}
                   >
-                    <p className="whitespace-pre-wrap">{message.text}</p>
+                    <p className="whitespace-pre-wrap break-words">{message.text}</p>
                     <p
                       className={cn(
                         'text-[10px] mt-1',
@@ -199,7 +199,7 @@ export default function Chatbot() {
             </div>
 
             {/* Input */}
-            <div className="p-4 bg-white border-t border-gray-100">
+            <div className="p-3 sm:p-4 bg-white border-t border-gray-100 safe-bottom">
               <div className="flex items-center space-x-2">
                 <input
                   type="text"
@@ -208,14 +208,14 @@ export default function Chatbot() {
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
                   disabled={isLoading}
-                  className="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl text-sm outline-none focus:border-red-600 transition-colors disabled:opacity-50"
+                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-50 border border-gray-200 rounded-2xl text-sm outline-none focus:border-red-600 transition-colors disabled:opacity-50"
                 />
                 <button
                   onClick={sendMessage}
                   disabled={!inputValue.trim() || isLoading}
-                  className="p-3 bg-red-600 text-white rounded-2xl hover:bg-luxury-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-2 sm:p-3 bg-red-600 text-white rounded-2xl hover:bg-luxury-black transition-all disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
                 >
-                  <Send size={20} />
+                  <Send size={18} className="sm:w-5 sm:h-5" />
                 </button>
               </div>
             </div>

@@ -5,11 +5,11 @@ import { MapPin, Info, TrendingUp, Users } from 'lucide-react';
 
 const NEIGHBORHOODS = [
   { name: 'Stone Oak', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80', desc: 'Upscale living with top-rated schools and gated communities.', price: '$450k - $2M+' },
-  { name: 'The Dominion', image: 'https://images.unsplash.com/photo-1600585154340-be6199f7d009?auto=format&fit=crop&w=600&q=80', desc: 'San Antonio\'s premier luxury gated community.', price: '$800k - $10M+' },
+  { name: 'The Dominion', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', desc: 'San Antonio\'s premier luxury gated community.', price: '$800k - $10M+' },
   { name: 'Alamo Heights', image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80', desc: 'Historic charm with a sophisticated, small-town feel.', price: '$500k - $3M+' },
   { name: 'Fair Oaks Ranch', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80', desc: 'Spacious lots and hill country views just outside the city.', price: '$400k - $1.5M+' },
   { name: 'Downtown', image: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=600&q=80', desc: 'Urban living with historic lofts and modern penthouses.', price: '$300k - $2M+' },
-  { name: 'Boerne', image: 'https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&w=600&q=80', desc: 'A blend of German heritage and modern hill country luxury.', price: '$400k - $5M+' }
+  { name: 'Boerne', image: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80', desc: 'A blend of German heritage and modern hill country luxury.', price: '$400k - $5M+' }
 ];
 
 export default function Neighborhoods() {

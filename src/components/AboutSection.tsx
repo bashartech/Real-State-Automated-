@@ -13,9 +13,9 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -30,11 +30,11 @@ export default function AboutSection() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-red-600 rounded-3xl -z-0 hidden md:block" />
-            <div className="absolute -top-10 -left-10 w-40 h-40 border-8 border-gray-100 rounded-full -z-0" />
-            
-            <div className="absolute bottom-8 left-8 right-8 glass-morphism p-6 rounded-2xl shadow-xl">
-              <p className="text-luxury-black font-display font-bold text-xl mb-1">Scott J. Realtor</p>
+            <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 w-48 sm:w-64 h-48 sm:h-64 bg-red-600 rounded-3xl -z-0 hidden md:block" />
+            <div className="absolute -top-6 sm:-top-10 -left-6 sm:-left-10 w-32 sm:w-40 h-32 sm:h-40 border-4 sm:border-8 border-gray-100 rounded-full -z-0 hidden sm:block" />
+
+            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 glass-morphism p-4 sm:p-6 rounded-2xl shadow-xl">
+              <p className="text-luxury-black font-display font-bold text-lg sm:text-xl mb-1">Scott J. Realtor</p>
               <p className="text-red-600 font-bold text-xs uppercase tracking-widest">Founder & Lead Agent</p>
             </div>
           </motion.div>
@@ -47,15 +47,15 @@ export default function AboutSection() {
             <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
               {t('about.tag')}
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-luxury-black mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-luxury-black mb-6 sm:mb-8 leading-tight">
               {t('about.title')} <br />
               <span className="text-red-600">{t('about.titleAccent')}</span>
             </h2>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
               {t('about.desc1')} {t('about.desc2')}
             </p>
-            
-            <div className="space-y-4 mb-10">
+
+            <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
               {[
                 'Hyper-local neighborhood expertise',
                 'Advanced digital marketing strategies',
@@ -63,18 +63,18 @@ export default function AboutSection() {
                 'Seamless end-to-end transaction management'
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-3">
-                  <CheckCircle2 className="text-red-600" size={20} />
-                  <span className="text-luxury-black font-medium">{item}</span>
+                  <CheckCircle2 className="text-red-600 flex-shrink-0" size={18} />
+                  <span className="text-luxury-black font-medium text-sm sm:text-base">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {stats.map((stat, i) => (
                 <div key={i}>
-                  <div className="mb-2">{stat.icon}</div>
-                  <p className="text-2xl font-display font-bold text-luxury-black">{stat.value}</p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">{stat.label}</p>
+                  <div className="mb-2 w-5 h-5 sm:w-6 sm:h-6">{stat.icon}</div>
+                  <p className="text-xl sm:text-2xl font-display font-bold text-luxury-black">{stat.value}</p>
+                  <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-gray-500 font-bold">{stat.label}</p>
                 </div>
               ))}
             </div>

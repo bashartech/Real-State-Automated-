@@ -7,10 +7,10 @@ export default function RecentSales() {
   const { t } = useLanguage();
   
   const sales = [
-    { id: 1, image: 'https://images.unsplash.com/photo-1600585154340-be6199f7d009?auto=format&fit=crop&w=600&q=80', price: '$1.4M', address: 'Stone Oak', status: 'Sold' },
+    { id: 1, image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80', price: '$1.4M', address: 'Stone Oak', status: 'Sold' },
     { id: 2, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80', price: '$850K', address: 'Fair Oaks', status: 'Sold' },
-    { id: 3, image: 'https://images.unsplash.com/photo-1600607687940-c52af096999c?auto=format&fit=crop&w=600&q=80', price: '$920K', address: 'The Dominion', status: 'Sold' },
-    { id: 4, image: 'https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&w=600&q=80', price: '$1.1M', address: 'Alamo Heights', status: 'Sold' },
+    { id: 3, image: 'https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1200&q=80', price: '$920K', address: 'The Dominion', status: 'Sold' },
+    { id: 4, image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', price: '$1.1M', address: 'Alamo Heights', status: 'Sold' },
   ];
 
   return (

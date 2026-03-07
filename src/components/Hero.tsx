@@ -36,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] sm:min-h-[700px] flex items-center overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -56,18 +56,18 @@ export default function Hero() {
       </div>
 
       {/* Slider Controls */}
-      <div className="absolute bottom-10 right-10 z-20 flex space-x-4">
-        <button 
+      <div className="absolute bottom-6 sm:bottom-10 right-4 sm:right-10 z-20 flex space-x-2 sm:space-x-4">
+        <button
           onClick={prevImage}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-red-600 transition-all border border-white/20"
+          className="p-2 sm:p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-red-600 transition-all border border-white/20"
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
         </button>
-        <button 
+        <button
           onClick={nextImage}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-red-600 transition-all border border-white/20"
+          className="p-2 sm:p-3 rounded-full bg-white/10 backdrop-blur-md text-white hover:bg-red-600 transition-all border border-white/20"
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={20} className="sm:w-6 sm:h-6" />
         </button>
       </div>
 
@@ -78,14 +78,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* 
-            
-            */}
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold text-white leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold text-white leading-tight mb-4 sm:mb-6">
               {t('hero.title')} <br />
               <span className="text-red-600">{t('hero.titleAccent')}</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-10 max-w-xl leading-relaxed">
               {t('hero.subtitle')}
             </p>
           </motion.div>
@@ -97,19 +94,19 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-2xl"
           >
-            <form onSubmit={handleSearch} className="flex-1 w-full flex items-center px-4 py-3 border-b md:border-b-0 md:border-r border-gray-100">
-              <Search className="text-gray-400 mr-3" size={20} />
+            <form onSubmit={handleSearch} className="flex-1 w-full flex items-center px-3 sm:px-4 py-2 sm:py-3 border-b md:border-b-0 md:border-r border-gray-100">
+              <Search className="text-gray-400 mr-2 sm:mr-3 flex-shrink-0" size={18} />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('hero.searchPlaceholder')}
-                className="w-full bg-transparent outline-none text-luxury-black placeholder:text-gray-400 font-medium"
+                className="w-full bg-transparent outline-none text-luxury-black placeholder:text-gray-400 font-medium text-sm sm:text-base"
               />
             </form>
             <div className="hidden md:flex items-center px-4 py-3 border-r border-gray-100">
               <Home className="text-gray-400 mr-3" size={20} />
-              <select 
+              <select
                 value={propertyType}
                 onChange={(e) => setPropertyType(e.target.value)}
                 className="bg-transparent outline-none text-luxury-black font-medium cursor-pointer"
@@ -120,12 +117,12 @@ export default function Hero() {
                 <option value="Luxury">{t('hero.luxury')}</option>
               </select>
             </div>
-            <button 
+            <button
               onClick={handleSearch}
-              className="w-full md:w-auto bg-red-600 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-luxury-black transition-all flex items-center justify-center group"
+              className="w-full md:w-auto bg-red-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-luxury-black transition-all flex items-center justify-center group"
             >
               {t('hero.searchBtn')}
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
             </button>
           </motion.div>
 
@@ -134,21 +131,21 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-12 flex items-center space-x-12"
+            className="mt-8 sm:mt-12 flex flex-wrap items-center gap-6 sm:gap-0 sm:space-x-8 md:space-x-12"
           >
             <div>
-              <p className="text-3xl font-display font-bold text-white">$500M+</p>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Sales Volume</p>
+              <p className="text-2xl sm:text-3xl font-display font-bold text-white">$500M+</p>
+              <p className="text-xs sm:text-sm text-white/60 uppercase tracking-widest">Sales Volume</p>
             </div>
-            <div className="w-px h-10 bg-white/20" />
+            <div className="w-px h-8 sm:h-10 bg-white/20 hidden sm:block" />
             <div>
-              <p className="text-3xl font-display font-bold text-white">15+</p>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Years Experience</p>
+              <p className="text-2xl sm:text-3xl font-display font-bold text-white">15+</p>
+              <p className="text-xs sm:text-sm text-white/60 uppercase tracking-widest">Years Experience</p>
             </div>
-            <div className="w-px h-10 bg-white/20" />
+            <div className="w-px h-8 sm:h-10 bg-white/20 hidden sm:block" />
             <div>
-              <p className="text-3xl font-display font-bold text-white">100%</p>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Client Satisfaction</p>
+              <p className="text-2xl sm:text-3xl font-display font-bold text-white">100%</p>
+              <p className="text-xs sm:text-sm text-white/60 uppercase tracking-widest">Client Satisfaction</p>
             </div>
           </motion.div>
         </div>

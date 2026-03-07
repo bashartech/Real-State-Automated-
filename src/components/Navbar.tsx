@@ -51,26 +51,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-6 group">
-            <div className="flex items-center space-x-4 ">
-              <img 
-                src="https://dims.web.production.kw-prod.brightspot.cloud/dims4/default/7ce5add/2147483647/strip/true/crop/2880x886+0+0/resize/400x123!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fattachment-prod-e2ad%2F191055%2Fd60hl11beopc70ni220g.png" 
-                alt="Scott J. Realtor Group" 
+          <Link to="/" className="flex items-center space-x-3 sm:space-x-6 group">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <img
+                src="https://dims.web.production.kw-prod.brightspot.cloud/dims4/default/7ce5add/2147483647/strip/true/crop/2880x886+0+0/resize/400x123!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fattachment-prod-e2ad%2F191055%2Fd60hl11beopc70ni220g.png"
+                alt="Scott J. Realtor Group"
                 className={cn(
-                  "h-10 w-auto transition-all duration-300",
+                  "h-8 sm:h-10 w-auto transition-all duration-300",
                   // isScrolled ? "brightness-100" : "brightness-0 invert"
                 )}
                 referrerPolicy="no-referrer"
               />
               <div className={cn(
-                "w-px h-8 transition-colors",
+                "w-px h-6 sm:h-8 transition-colors",
                 // isScrolled ? "bg-gray-200" : "bg-white/20"
               )} />
-              <img 
-                src="https://dims.web.production.kw-prod.brightspot.cloud/dims4/default/eb7835f/2147483647/strip/true/crop/2722x1721+0+0/resize/400x253!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fattachment-prod-e2ad%2F229192%2Fcmkor5cj3bls70lom3vg.png" 
-                alt="KW Heritage" 
+              <img
+                src="https://dims.web.production.kw-prod.brightspot.cloud/dims4/default/eb7835f/2147483647/strip/true/crop/2722x1721+0+0/resize/400x253!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fattachment-prod-e2ad%2F229192%2Fcmkor5cj3bls70lom3vg.png"
+                alt="KW Heritage"
                 className={cn(
-                  "h-10 w-auto transition-all duration-300",
+                  "h-8 sm:h-10 w-auto transition-all duration-300",
                   // isScrolled ? "brightness-100" : "brightness-0 invert"
                 )}
                 referrerPolicy="no-referrer"
